@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dea’s Mind: A Roller Coaster Ride 🎢🤯 </title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<script>
+    // Scroll Animation Logic
+    document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('show')
+                }
+            })
+        }, {
+            threshold: 0.5 // Trigger ketika 50% element terlihat
+        })
+    
+        document.querySelectorAll('.polaroids-container').forEach(element => {
+            observer.observe(element)
+        })
+    })
+    </script>
+
+<body>
+    <section class="menu">
+       <div class="nav">
+        <div class="logo"><h1>Dea's<b>world</b></h1></div>
+        <ul> 
+           <li> <a href="index.html">Home</a> </li>
+           <li> <a href="https://drive.google.com/drive/folders/1XCkUEGV4is-jzXsbC27-MWQJKkaf2Mrf" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="drive-link"
+           aria-label="Buka Portfolio di Google Drive (link eksternal)">
+            <span class="link-text">Curriculum Vitae & Porto</span>
+         </a>  </li>
+           <li>  <a href="contact.html">Contact</a>  </li>  
+          
+        </ul>
+       </div>
+           
+    </section>
+   
+
+    <hr />
+
+    <header>
+        <section class="profile-section">
+        <div class="profile-container">
+            <div class="image-container">
+                <img src="image/myphoto.png" alt="Foto Dea">
+            </div>
+            <div class="info">
+                <h1>Dea Kusuma Ningrum</h1>
+                <p>(Information System)</p>
+                <p class="description">
+                    Manusia kepo dan mood yang sering berubah-ubah. 
+                    Tertarik mengeksplorasi UI/UX, data science, serta psikologi.  
+                    Kadang serius, kadang absurd—tergantung update sistem hari ini.
+                </p>
+                <p><a href="about.html">For more...</a></p> <!-- Link to About Me -->
+            </div>
+        </div>
+    </section>
+    </header>
+     <hr /> 
+
+
+     <div class="polaroids-container scroll-trigger">
+    <div class="section-header">
+    <h2 class="polaroid-title">my interest things</h2>
+    </div>
+
+     <div class="polaroids-container">
+        <div class="polaroid">
+            <img src="image/read.jpg" alt="Photo 1">
+            <p> Reading Books</p>
+        </div>
+        <div class="polaroid">
+            <img src="image/data.jpg" alt="Photo 2">
+            <p> Data Enthusisast</p>
+        </div>
+        <div class="polaroid">
+            <img src="image/design.jpg" alt="Photo 3">
+            <p>Suka aja </p>
+        </div>
+    </div>
+    </div>
+</section>
+
+<footer>
+    <p>Copyright &copy; 2025 Dea Kusuma Ningrum.</p>
+</footer>
+
+</body>
+</html>
